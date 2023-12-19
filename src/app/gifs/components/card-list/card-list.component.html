@@ -1,0 +1,24 @@
+<div class="row">
+<!-- colocar el ngfor en el div a quiero que se repita  -->
+  <div *ngFor="let gifs of gifsList" class="col-md-3 col-sm-6">
+    <div class="card mb-2 text-center bg-dark">
+      <!-- crear imagen -->
+      <img
+      [src]="gifs.images.downsized_medium.url"
+      [alt]="gifs.title"
+      srcset=""
+      class="card-img-top">
+      <!-- titulo -->
+      <div class="card-body text-white">
+        <p class="card-text">
+          {{gifs.title}}
+        </p>
+
+
+
+      </div>
+    </div>
+  </div>
+
+
+</div>
