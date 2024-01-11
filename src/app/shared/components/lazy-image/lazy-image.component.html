@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-center">
+  <img
+    [src]="urlImage"
+    [alt]="altImage"
+    class="card-img-top animate__animated animate__pulse"
+    (load)="onLoad()"
+    [ngStyle]="{ display: hasLoader ? '' : 'none' }"
+  />
+  <!-- *ngStyle="{display:hasLoader?'':'none'}"
+  si hasloader=true no poner nada, si es false esconder la imagen
+  -->
+
+  <img
+  *ngIf="!hasLoader"
+  src="assets/loader.svg"
+  alt=""
+  class="m-3" />
+</div>

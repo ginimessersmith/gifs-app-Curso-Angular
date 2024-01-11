@@ -23,7 +23,6 @@ export class GifsService {
     if (this._tagHistory.includes(tag)) {
       //? retorna un arreglo sin el tag, en caso que este exista
       this._tagHistory = this._tagHistory.filter((oldTag) => oldTag !== tag)
-
     }
 
     this._tagHistory.unshift(tag)
